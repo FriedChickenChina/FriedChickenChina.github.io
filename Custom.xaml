@@ -1,0 +1,142 @@
+﻿
+<!-- 这是 PCL2 的主页自定义文件。你可以通过修改这个文件来自定义 PCL2 主页：添加文本、打开网页、启动游戏，等等。
+     如果你倒腾这个文件把 PCL2 玩炸了，把这个文件直接删除就行了。
+     如果你懂得 WPF 的布局文件编写，你甚至可以做出不少的新玩意儿…… -->
+
+
+    <StackPanel Margin="0,2,1,16">
+        <local:MyHint Text="服务器不接受任何理由的破坏他人建筑及他人私有财务以及使用第三方修改器等！" />
+    </StackPanel>
+
+
+<local:MyCard Title="欢迎！ |  Welcome! " Margin="0,0,0,15">
+        <Image Height="90" HorizontalAlignment="Left" Margin="20,0,10,30" Source="https://raw.githubusercontent.com/FriedChickenChina/FriedChickenChina.github.io/FriedChickenChina-ziyuan/SmartStackLOGO(%E5%8A%B3%E6%96%AF%E8%8E%B1%E6%96%AF%20-%20JUST%20IN%20%20GITHUB.png" />
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap" Margin="75,0,0,4"
+                   Text="欢迎加入SmartStack养老社区!
+废话不多说，进来就可以到服务器尽情玩耍啦！
+本服游戏版本为1.16.3，纯净服务端并开启正版验证，自备合适的纯净端或使用群内便携客户端即可进入服务器！服务器IP为mc.233yun.com
+本服拥有详尽的玩家行为记录插件和反作弊插件，请各位玩家做任何事前三思而后行。
+原则上本服不删档、不停机，玩家们可以放心的在本服付出心血，如果有更好的建议可私聊服主！
+最后说一下，本服是公益服，不接受任何赞助哦~！" />
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
+                   Text="开发中。。。" />
+	    <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                   Text="进入 SmartStack" EventType="启动游戏" EventData="1.16.3|mc.233yun.com" ToolTip="使用 最新版客户端 进入 SmartStack" />
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="最新公告  |  Information" Margin="0,0,0,15">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap"
+                   Text="    米娜桑 今晚 停服更新1.16.3！！！并且更新插件
+掐指一算，我服也将近运行了八个月了
+感谢大家对本服的支持！我廖某感激不尽
+由于本人学业繁忙，直至2021年高考，我服仅维持稳定性更新。当然，管理有空也可以整活儿
+在此，我对全体玩家致歉！
+最后，祝各位事业有成，心想事成！
+以上为全部最新公告" />
+    </StackPanel>
+</local:MyCard>
+
+
+<local:MyCard Title="下载最新版客户端 | Download the new launcher" Margin="0,0,0,15">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap"
+                   Text="点击下方按钮即可下载最新版SmartStack启动器¹并可选择保存地点，建议放到当前启动器目录下~" />
+        <local:MyButton Margin="0,8,0,0" Width="250" Height="35"
+                   Text="下载 启动器¹" EventType="下载文件" EventData="https://www.mcbbs.net/template/mcbbs/image/logo_sc.png" />
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="快捷工具 - Tools" Margin="0,0,0,15">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyHint Margin="0,0,0,7" IsWarn="False"
+                   Text="如果你有什么困难也许下面的按钮可以帮到你哦~" />
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
+                   Text=" ——玩家群组—— | Teams of Player " />
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10"
+                   Text=" Discord:https://discord.gg/paEAVtY " />
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10"
+                   Text=" Telegram:https://t.me/joinchat/OM1UMBkv9Fe1nhsiM5uaVw " />
+		
+		
+        <!-- 这是第一行 -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="打开 服务器官网" EventType="打开网页" EventData="http://awa.233yun.com/" />
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                   Text="进入 SmartStack" EventType="启动游戏" EventData="1.16.3|mc.233yun.com" ToolTip="使用 最新版客户端 进入 SmartStack" />
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                   Text="打开 QQ" EventType="打开文件" ToolTip="暂不支持打开TIM等" EventData="mspaint.exe" />
+        </StackPanel>
+      
+        <!-- 这是第二行 -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" 
+                   Text="复制召唤命令" EventType="复制文本" EventData="/execute as @a at @s run summon Creeper ~ ~2 ~" ToolTip="这条 Minecraft 命令会在每个玩家头顶召唤一只苦力怕！" />
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                   Text="打开 社区WIKI" EventType="打开网页" ToolTip="打开SmartStack社区WiKi百科" EventData="https://github.com/liaoxu2003/wiki/"/>
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                   Text="下载自研版启动器" EventType="下载文件" ToolTip="完全是Koukie自己研发的哦~" EventData="https://www.mcbbs.net/uc_server/data/avatar/000/14/51/06_avatar_small.jpg?ts=1471402592" />
+        </StackPanel>
+      
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="服务器日志 - LOG OF SERVISE " Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+	<StackPanel Margin="25,40,23,15">
+		<TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
+                   Text="2020/07/06  服务器更新至1.16.1   - LRainChan" />
+	    <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
+                   Text="2020/10/01  更新1.16.3   - Liaoxu2003" />
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
+                   Text="2020/10/15  开发中   - KouKie" />
+	</StackPanel>
+</local:MyCard>
+
+<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+    <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Red"
+                   Text="刷新主页 | Refresh" EventType="刷新主页" ToolTip="" />
+    <local:MyButton Margin="268,0,10,0" Width="140" Height="35" HorizontalAlignment="Right" Padding="13,0,13,0"
+                   Text="建议 | Feedback " EventType="打开网页" ToolTip="快给我们提出建议吧~" EventData="https://feedback.com" />
+</StackPanel>
+	
+<!-- 
+
+全部通用的属性：
+ - Width、Height：设置宽度与高度
+ - ToolTip：设置鼠标指向时的提示文本
+ - Foreground：调整前景颜色（十六进制字符串，例如 #FF010203 代表 ARGB 中的 255,1,2,3。前两位代表不透明度，FF 为全不透明，00 为全透明）
+ - Background：调整背景颜色（使用类似 Background="{DynamicResource ColorBrush5}" 的格式以调用 PCL2 当前的主题颜色，修改末尾的数字编号以改变颜色浓度）
+ - Margin：调整外边距（格式为 左,上,右,下。例如 Margin="0,0,0,2" 即为 2 单位的下边距）
+ - HorizontalAlignment：设置对齐方式（Left、Center、Right）
+
+TextBlock（纯文本）：
+ - Text：设置显示的文本（如果要使用引号等特殊字符，自行百度 XAML 转义）
+ - TextWrapping：开启自动换行
+ - FontSize：设置字号
+ 
+Image（图片）：
+ - Source：要显示的图片的网址
+
+local:MyHint（提示条）：
+ - Text：设置显示的文本（&#xA; 代表换行）
+ - IsWarn：设置为 True 代表警告样式，False 代表提示样式
+ 
+local:MyButton（按钮）：
+ - Text：设置显示的文本
+ - Padding：设置内边距，格式与 Margin 一致
+ - ColorType：设置颜色主题（Highlight 为当前启动器的主题颜色，Red 为红色，默认为黑色）
+ - EventType、EventData：触发特定事件
+ 
+local:MyTextButton（文本按钮）：
+ - Text：设置显示的文本
+ - EventType、EventData：触发特定事件
+ 
+local:MyCard（卡片）：
+ - Title：设置显示的标题文本
+ - CanSwap：这张卡片是否可以折叠，True 为是，False 为否
+ - IsSwaped：这张卡片是否默认折叠，要求 CanSwap 必须为 True
+
+-->
