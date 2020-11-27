@@ -1,2 +1,2 @@
-# FriedChickenChina.github.io
+# 欢迎！
 官网
